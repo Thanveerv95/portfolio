@@ -6,9 +6,9 @@ const Home = () => {
     <div className="page-container">
       <h1>Hi, I'm Mohammed Thanveer</h1>
       <p>Welcome to My Personal Portfolio</p>
-        <a href="/about">
+       <Link to="/About">
         <button>Learn More</button>
-        </a>
+      </Link>
     </div>
   );
 };
