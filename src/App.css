@@ -1,0 +1,235 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Navbar Styling */
+nav {
+  background-color: #333;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none; /* Ensure no underline */
+}
+
+nav ul li a:hover {
+  color: #f39c12;
+}
+
+/* Page Container Styling */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items to the top */
+  align-items: center;
+  min-height: 80vh; /* Ensure the container takes 80% of viewport height */
+  padding: 20px;
+  margin-top: 0; /* Removed extra top margin */
+  overflow-y: auto; /* Make it scrollable */
+  text-align: center;
+}
+
+.page-container h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+}
+
+.page-container p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #333;
+  color: white;
+  margin-top: auto;
+}
+
+/* General Page Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply fade-in animation to page-container */
+.page-container {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Button Hover Animation */
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+  background-color: #f39c12;
+  transform: scale(1.1);
+}
+
+button a {
+  color: white; /* Set the link color to white */
+  text-decoration: none; /* Remove underline */
+}
+
+button a:hover {
+  color: lightgray; /* Change color on hover (optional) */
+}
+
+/* Projects Section Styling */
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  margin-top: 20px;
+  height: auto; /* Ensure the height adjusts automatically */
+  max-height: 80vh; /* Ensures content takes up 80% of the viewport height */
+  overflow-y: auto; /* Enables scrolling when content exceeds the container height */
+}
+
+.project {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px; /* Restrict width on larger screens */
+  box-sizing: border-box;
+}
+
+.project h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.project strong {
+  color: #000;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 768px) {
+  .projects-section {
+    padding: 40px;
+  }
+
+  .project {
+    width: 80%; /* Wider project container on larger screens */
+  }
+}
+
+/* Qualifications Page Styling */
+.qualifications-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.qualification {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+.qualification h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.qualification p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.qualification strong {
+  color: #000;
+}
+
+/* Styling for Mobile */
+@media screen and (max-width: 768px) {
+  .qualifications-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .qualification h3 {
+    font-size: 1.3rem;
+  }
+}
