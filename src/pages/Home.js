@@ -7,7 +7,7 @@ const Home = () => {
     <div className="page-container">
       <h1>Hi, I'm Mohammed Thanveer</h1>
       <p>Welcome to My Personal Portfolio</p>
-       <Link to="/About">
+       <Link to="/about">
         <button>Learn More</button>
       </Link>
     </div>
