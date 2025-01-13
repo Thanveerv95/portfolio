@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
 
 const Home = () => {
@@ -6,9 +7,9 @@ const Home = () => {
     <div className="page-container">
       <h1>Hi, I'm Mohammed Thanveer</h1>
       <p>Welcome to My Personal Portfolio</p>
-        <a href="/about">
-        <button>Learn More</button>
-        </a>
+        <Link to="/about">
+        <button>About Me</button
+        ></Link>
     </div>
   );
 };

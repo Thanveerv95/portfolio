@@ -26,15 +26,15 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 nav ul li a {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
-  text-decoration: none; /* Ensure no underline */
+  text-decoration: none;
 }
 
 nav ul li a:hover {
@@ -45,25 +45,22 @@ nav ul li a:hover {
 .page-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align items to the top */
   align-items: center;
-  min-height: 80vh; /* Ensure the container takes 80% of viewport height */
   padding: 20px;
-  margin-top: 0; /* Removed extra top margin */
-  overflow-y: auto; /* Make it scrollable */
+  min-height: 80vh;
   text-align: center;
 }
 
 .page-container h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #2c3e50;
 }
 
 .page-container p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #7f8c8d;
   max-width: 600px;
-  margin-top: 20px;
+  margin: 20px auto;
 }
 
 /* Footer Styling */
@@ -72,27 +69,40 @@ footer {
   padding: 1rem 0;
   background-color: #333;
   color: white;
-  margin-top: auto;
 }
 
-/* General Page Fade-In Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Projects Section Styling */
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 20px;
 }
 
-/* Apply fade-in animation to page-container */
-.page-container {
-  animation: fadeIn 1s ease-in-out;
+.project {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 90%; /* Adjusted for mobile */
+  max-width: 600px; /* Restrict width on larger screens */
+  box-sizing: border-box;
 }
 
-/* Button Hover Animation */
+.project h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Button Styling */
 button {
   margin: 10px;
   padding: 10px 20px;
@@ -106,107 +116,87 @@ button {
 
 button:hover {
   background-color: #f39c12;
-  transform: scale(1.1);
-}
-
-button a {
-  color: white; /* Set the link color to white */
-  text-decoration: none; /* Remove underline */
-}
-
-button a:hover {
-  color: lightgray; /* Change color on hover (optional) */
-}
-
-/* Projects Section Styling */
-.projects-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 20px;
-  margin-top: 20px;
-  height: auto; /* Ensure the height adjusts automatically */
-  max-height: 80vh; /* Ensures content takes up 80% of the viewport height */
-  overflow-y: auto; /* Enables scrolling when content exceeds the container height */
-}
-
-.project {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  width: 100%;
-  max-width: 800px; /* Restrict width on larger screens */
-  box-sizing: border-box;
-}
-
-.project h2 {
-  color: #333;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.project p {
-  font-size: 16px;
-  color: #666;
-  line-height: 1.5;
-}
-
-.project strong {
-  color: #000;
+  transform: scale(1.05);
 }
 
 /* Responsive Design */
-@media screen and (min-width: 768px) {
-  .projects-section {
-    padding: 40px;
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .page-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .page-container p {
+    font-size: 0.9rem;
+    padding: 0 10px;
   }
 
   .project {
-    width: 80%; /* Wider project container on larger screens */
+    width: 95%; /* Use most of the screen for smaller devices */
+  }
+
+  footer {
+    font-size: 0.8rem;
   }
 }
 
-/* Qualifications Page Styling */
+@media screen and (max-width: 480px) {
+  .page-container h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+/* General Anchor Tag Styling */
+a {
+  color: white; /* Make hyperlinks white */
+  text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+  color: #f39c12; /* Change color on hover */
+}
 .qualifications-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #f7f9fc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: 'Arial', sans-serif;
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-h2 {
+.qualifications-container h2 {
   font-size: 2rem;
   color: #2c3e50;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
-.qualification {
-  background-color: #ffffff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  width: 100%;
-  max-width: 800px;
-  box-sizing: border-box;
-}
 
 .qualification h3 {
   font-size: 1.5rem;
-  color: #2c3e50;
-  margin-bottom: 10px;
+  color: #333;
+  margin-bottom: 5px;
 }
 
 .qualification p {
@@ -215,21 +205,81 @@ h2 {
   line-height: 1.6;
 }
 
-.qualification strong {
-  color: #000;
+.education-section, .training-section {
+  width: 100%;
+  margin-bottom: 30px;
 }
 
-/* Styling for Mobile */
+.education-section h2, .training-section h2 {
+  color: #f39c12;;
+}
+
+/* Navbar Styling */
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 8px 16px;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsive Navbar */
 @media screen and (max-width: 768px) {
-  .qualifications-container {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
     padding: 10px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  .qualification h3 {
-    font-size: 1.3rem;
   }
 }

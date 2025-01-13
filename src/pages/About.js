@@ -21,6 +21,15 @@ const About = () => {
       <Link to="/qualifications">
         <button>Education & Certifications</button>
       </Link>
+     
+      <Link to="/skills">
+        <button>Skills</button>
+      </Link>
+      
+      <Link to="/projects">
+        <button>Projects</button>
+      </Link>
+      
     </div>
   );
 };

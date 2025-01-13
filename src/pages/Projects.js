@@ -5,6 +5,7 @@ const Projects = () => {
   return (
     <div className="projects-section">
       <div className="project">
+        <h1>My Projects</h1>
         <h2>FitCraft - Redefining Tailoring Precision</h2>
         <p>
           Utilized cutting-edge computer vision and machine learning methodologies to create a dependable approach for accurately measuring human body dimensions.
